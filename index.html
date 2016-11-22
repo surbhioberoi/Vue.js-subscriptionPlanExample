@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue Todo</title>
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div v-for="plan in plans">
+            <plan :plan="plan" :active.sync="active"></plan>
+        </div>
+        <template id="plan-template">
+            <div>
+                <span class="block">
+                    {{ plan.name }}
+                </span>
+                <span class="block">
+                    {{ plan.price}}/month
+                </span>
+                <button v-on:click="setActivePlan" v-if="inactive">
+                    {{ isUpgrade ? 'Upgrade' : 'Downgrade' }}
+                </button>
+                <span v-else>
+                    <button class="current">Selected</button>
+                </span>
+            </div>
+        </template>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.js" charset="utf-8">
+        </script>
+        <script src="js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

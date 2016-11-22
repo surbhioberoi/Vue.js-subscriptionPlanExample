@@ -1,0 +1,27 @@
+body {
+    padding-top: 20px;
+    padding-left: 20px; 
+    color: #666;
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.8em;
+
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #414141;
+    border: solid 1px #f1f1f1;
+    color: #f1f1f1;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+}
+
+.block{
+    display: inline-block;
+    width: 8em;
+}
+
+.current {
+    background-color: teal;
+}
